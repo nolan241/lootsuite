@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
+gem 'rails'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -45,3 +44,12 @@ group :development do
   gem 'spring'
 end
 
+
+############## Custom ###################
+#Add bootstrap. bundle inst then run generator rails generate bootstrap:install static
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+
+
+#Install Font awesome
+#https://github.com/bokmann/font-awesome-rails
+gem "font-awesome-rails"

@@ -1,1 +1,1 @@
-social media scheduler to post using api
+social media scheduler to post using apigit 
