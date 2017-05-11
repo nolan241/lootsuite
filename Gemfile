@@ -53,3 +53,7 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 #Install Font awesome
 #https://github.com/bokmann/font-awesome-rails
 gem "font-awesome-rails"
+
+
+#Install simple form for bootstrap bundle then "rails g simple_form:install --bootstrap"
+gem 'simple_form'
