@@ -57,3 +57,9 @@ gem "font-awesome-rails"
 
 #Install simple form for bootstrap bundle then "rails g simple_form:install --bootstrap"
 gem 'simple_form'
+
+#Install Devise
+#https://github.com/plataformatec/devise
+#bundle then rails g devise:install => rails g devise:views  => rake db:migrate  
+#add timezone rails g migration AddTimeZoneToUsers time_zone:string.  Add to user model validates_presence_of :time_zone   
+gem 'devise'  
