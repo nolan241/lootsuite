@@ -66,3 +66,10 @@ gem 'devise'
 
 #store oAuth credentials
 gem 'dotenv-rails', groups:[:development]
+
+#omniauth
+#create a new file omniauth.rb in the app/config/initializers folder
+# create model -> run rails g model connection provider:string oauth_token:string secret:string user_id:integer
+# update connections and user model
+# create controller -> rails g controller connections create destroy --skip-template-engine
+gem 'omniauth-twitter'

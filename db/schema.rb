@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170513053252) do
+ActiveRecord::Schema.define(version: 20170518132024) do
+
+  create_table "connections", force: :cascade do |t|
+    t.string   "provider"
+    t.string   "oauth_token"
+    t.string   "secret"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

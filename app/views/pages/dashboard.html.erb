@@ -12,7 +12,14 @@
 		</div>
 		
 		<div class="social">
+			<% unless current_user.connections.where(provider: 'twitter').any? %>
+				<%= link_to 'Connect Twitter', 'auth/twitter', class: 'btn btn-info btn-block btn-sm' %>
+			<% else %>
+				<%= link_to 'Connect Twitter', 'auth/twitter', class: 'btn btn-info btn-block btn-sm', disabled: true %>
+				<%= link_to 'Delete Connection', connection_path(current_user.connections.where(provider: 'twitter').first), method: :delete %>
+			<% end %>
 		</div>
+
 		
 	</div>
 
