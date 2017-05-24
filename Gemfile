@@ -72,4 +72,9 @@ gem 'dotenv-rails', groups:[:development]
 # create model -> run rails g model connection provider:string oauth_token:string secret:string user_id:integer
 # update connections and user model
 # create controller -> rails g controller connections create destroy --skip-template-engine
+#twitter gem
 gem 'omniauth-twitter'
+#facebook gem
+gem 'omniauth-facebook'
+
+

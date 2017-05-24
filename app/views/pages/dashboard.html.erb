@@ -12,12 +12,21 @@
 		</div>
 		
 		<div class="social">
+			<!-- connect with twitter -->
 			<% unless current_user.connections.where(provider: 'twitter').any? %>
 				<%= link_to 'Connect Twitter', 'auth/twitter', class: 'btn btn-info btn-block btn-sm' %>
 			<% else %>
 				<%= link_to 'Connect Twitter', 'auth/twitter', class: 'btn btn-info btn-block btn-sm', disabled: true %>
 				<%= link_to 'Delete Connection', connection_path(current_user.connections.where(provider: 'twitter').first), method: :delete %>
 			<% end %>
+			
+			<!-- connect with facebook -->
+			<% unless current_user.connections.where(provider: 'facebook').any? %>
+				<%= link_to 'Connect Facebook', 'auth/facebook', class: 'btn btn-info btn-block btn-sm' %>
+			<% else %>
+				<%= link_to 'Connect Facebook', 'auth/facebook', class: 'btn btn-info btn-block btn-sm', disabled: true %>
+				<%= link_to 'Delete Connection', connection_path(current_user.connections.where(provider: 'facebook').first), method: :delete %>
+			<% end %>			
 		</div>
 
 		
