@@ -77,4 +77,8 @@ gem 'omniauth-twitter'
 #facebook gem
 gem 'omniauth-facebook'
 
+#make sure you can't schedule a post for a date earlier than today
+#https://github.com/adzap/timeliness
+gem 'validates_timeliness', '~>3.0'
+
 
