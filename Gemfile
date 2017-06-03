@@ -81,4 +81,8 @@ gem 'omniauth-facebook'
 #https://github.com/adzap/timeliness
 gem 'validates_timeliness', '~>3.0'
 
-
+#add date time picker to the date fields for easy to select scheduling
+#add to application.js and application.css
+#run generator... rails g datetimepicker_rails:install Font-Awesome
+gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
+gem 'momentjs-rails', '~> 2.9',  :github => 'derekprior/momentjs-rails'

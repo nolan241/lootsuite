@@ -3,9 +3,8 @@
     <div class="form-input">
         <%= f.input :content, required: true, maxlength: 140 %>
         <p>This post will be scheduled in <b><%= Time.zone.name %></b></p>
-        <%= f.input :scheduled_at, required: true %>
-    </div>
-    
+		<%= f.input :scheduled_at, required: true, as: :datetime_picker %>
+
     <div class="form-input">
         <% if current_user.connections.where(provider: 'twiiter').any? %>
             <%= f.input :twitter %> 
@@ -18,4 +17,5 @@
     <div class="form-actions">
         <%= f.button :submit %> 
     </div>
+    
 <% end %>

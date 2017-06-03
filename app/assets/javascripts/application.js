@@ -13,5 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+
+// for the datetime picker place above turbolinks
+//= require moment
+//= require bootstrap-datetimepicker 
+//= require pickers
+
 //= require turbolinks
 //= require_tree .
