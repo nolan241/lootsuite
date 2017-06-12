@@ -86,3 +86,8 @@ gem 'validates_timeliness', '~>3.0'
 #run generator... rails g datetimepicker_rails:install Font-Awesome
 gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
 gem 'momentjs-rails', '~> 2.9',  :github => 'derekprior/momentjs-rails'
+
+#https://github.com/sferik/twitter
+gem 'twitter'
+#https://github.com/arsduo/koala
+gem 'koala'
