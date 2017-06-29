@@ -15,5 +15,10 @@ class Post < ApplicationRecord
 		end
 		client.update(self.content)
 	end
-
+	
+	def to_facebook
+		graph = Koala::Facebook::API.new(self.user.facebook.oauth_token)
+		graph.put_connections("me", "feed", message: self.content)
+	end
+	
 end

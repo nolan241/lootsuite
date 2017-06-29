@@ -91,3 +91,13 @@ gem 'momentjs-rails', '~> 2.9',  :github => 'derekprior/momentjs-rails'
 gem 'twitter'
 #https://github.com/arsduo/koala
 gem 'koala'
+
+#schedule delayed jobs for posts
+#https://github.com/collectiveidea/delayed_job
+gem 'delayed_job_active_record'
+
+#interface for delayed jobs
+#https://github.com/tatey/delayed-web
+#rails g delayed:web:install 
+#run server by => rake jobs:work
+gem 'delayed-web'
