@@ -6,7 +6,7 @@
 		<%= f.input :scheduled_at, required: true, as: :datetime_picker %>
 
     <div class="form-input">
-        <% if current_user.connections.where(provider: 'twiiter').any? %>
+        <% if current_user.connections.where(provider: 'twitter').any? %>
             <%= f.input :twitter %> 
         <% end %> 
         <% if current_user.connections.where(provider: 'facebook').any? %>

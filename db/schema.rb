@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170629030323) do
+ActiveRecord::Schema.define(version: 20170629035226) do
 
   create_table "connections", force: :cascade do |t|
     t.string   "provider"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20170629030323) do
     t.boolean  "twitter"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.text     "error"
   end
 
   create_table "users", force: :cascade do |t|

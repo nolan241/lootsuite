@@ -1,7 +1,7 @@
 class ScheduleJob < ApplicationJob
   queue_as :default
 
-  def perform(*args)
-    # Do something later
+  def perform(post)
+    post.display
   end
 end

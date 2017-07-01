@@ -1,0 +1,20 @@
+<div class="panel panel-default">
+    
+    <!-- heading --> 
+    <div class="panel-heading">
+        <% if post.facebook == true %><span class="label label-primary"></span><% end %>
+        <% if post.twitter == true %><span class="label label-info"></span><% end %>
+        Scheduled on post.scheduled_at
+    </div>
+    
+    <!-- post content -->
+    <div class="panel-body">
+        <p><%= post.content %></p>
+    </div>
+    
+    <!-- post status -->
+    <div class="panel-footer">
+        <p><%= post.state.capitalize %></p>
+    </div>
+    
+</div>
