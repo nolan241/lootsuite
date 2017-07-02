@@ -101,3 +101,6 @@ gem 'delayed_job_active_record'
 #rails g delayed:web:install 
 #run server by => rake jobs:work
 gem 'delayed-web'
+
+#enable pagination for scheduled posts
+gem 'will_paginate'

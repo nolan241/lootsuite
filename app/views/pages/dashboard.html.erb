@@ -36,6 +36,7 @@
 	<div class="col-md-5">
 		<h3 class="text-center">Scheduled</h3>
 			<%= render @scheduled %>
+			<%= will_paginate @scheduled, :param_name => 'scheduled_page' %>
 		<hr>
 	</div>
 		
@@ -43,6 +44,7 @@
 	<div class="col-md-5">
 		<h3 class="text-center">History</h3>
 			<%= render @history %>
+		<%= will_paginate @scheduled, :param_name => 'history_page' %>			
 		<hr>
 	</div>	
 
