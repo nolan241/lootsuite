@@ -17,17 +17,22 @@ class Post < ApplicationRecord
 	end
 	
 	def display
+	#show posts
 		begin
-			if twitter == true
-				to_twitter
-			end
-			
-			if facebook == true
-				to_facebook
-			end	
-		
-			self.update_attributes(state: "posted")
-		
+			#don't display if it's cancelled
+			unless state = 'canceled'
+				#display if twitter was checked
+				if twitter == true
+					to_twitter
+				end
+				#display if facebook was checked
+				if facebook == true
+					to_facebook
+				end	
+				
+				#update state to show as posted
+				self.update_attributes(state: "posted")
+			end		
 		rescue Exception => e
 			self.update_attributes(state: "error", error: e.message)
 		end
@@ -35,6 +40,7 @@ class Post < ApplicationRecord
 	end
 	
 	def to_twitter
+	#submit post to twitter
 		client = Twitter::REST::Client.new do |config| 
 			config.access_token = self.user.twitter.oauth_token
 			config.access_token_secret = self.user.twitter.secret 
@@ -45,6 +51,7 @@ class Post < ApplicationRecord
 	end
 	
 	def to_facebook
+	#submit post to facebook
 		graph = Koala::Facebook::API.new(self.user.facebook.oauth_token)
 		graph.put_connections("me", "feed", message: self.content)
 	end

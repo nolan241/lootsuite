@@ -14,7 +14,7 @@
     
     <!-- post status -->
     <div class="panel-footer">
-        <p><%= post.state.capitalize %></p>
+        <p><%= post.state.capitalize %> <%= link_to 'cancel post', cancel_post_path(post), method: :put if post.state == 'scheduled' %> </p>
     </div>
     
 </div>

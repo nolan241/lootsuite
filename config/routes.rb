@@ -5,7 +5,13 @@ Rails.application.routes.draw do
     #created from adding delayed-web gem
     mount Delayed::Web::Engine, at: '/jobs'
   end
-  
+
+  #allow user to cancel post
+  resources :posts do 
+    member do 
+      put :cancel 
+    end
+  end  
   
   get 'auth/:provider/callback', to: 'connections#create'
   resources :connections, only: [:destroy]
